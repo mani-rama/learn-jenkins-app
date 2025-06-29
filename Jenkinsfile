@@ -8,7 +8,7 @@ pipeline {
                     echo 'hi'
                     ls -al
                     # npm --version
-                    npm ci
+                    # npm ci
                     cat /etc/*release*
                 '''
             }
