@@ -2,9 +2,15 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello') {
+        stage('Build') {
             steps {
-                echo 'Hello World'
+                sh '''
+                    echo 'hi'
+                    ls -al
+                    npm --version
+                    npm ci
+                    cat /etc/*release*
+                '''
             }
         }
     }
