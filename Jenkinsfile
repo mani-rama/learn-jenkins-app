@@ -13,5 +13,14 @@ pipeline {
                 '''
             }
         }
+        stage ('test') {
+            steps {
+                sh '''
+                    echo 'test stage'
+                    ls -al
+                    cat /etc/*release*
+                '''
+            }
+        } 
     }
 }
